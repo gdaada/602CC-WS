@@ -1,0 +1,13 @@
+sudo apt update  
+sudo apt -y upgrade 
+sudo apt -y dist-upgrade  
+hostnamectl
+sudo snap install microstack --beta
+<password: 1to9>
+snap list microstack
+sudo microstack init --auto --control
+microstack.openstack --version
+microstack.openstack image list
+microstack.openstack flavor list
+microstack.openstack --help | more
+sudo snap get microstack config.credentials.keystone-password
