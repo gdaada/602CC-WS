@@ -1,0 +1,69 @@
+- Open NetBeans 
+- goto File
+- New Project
+- Category : Java Web  || Project : Web Application
+- Project Name : WS_P1
+- Server : Glassfish Server 4.1.1 > Next > Finish
+
+- Right CLick on FolderName ` WS_P1`
+- New > Other > 
+- Category: Web Services || File Types :  Web Service > Next 
+- Web Service Name : TempConvert and Package : tycs > Finish
+### Remember what you enter the package name it will be in use at further step ###
+
+### inside the public class TempConvert --> Clear Everything ###
+### Now we need to create 2 web services---> FtoC and CtoF ... here we go.... ###
+
+goto Design Tab  ( it is below the run button ) > 
+--- Add Operation1  ---> 
+Name : F_to_C
+Return Type : Float
+
+Add --> Parameter [
+    Name : f
+    Type: float
+]
+- done
+
+
+--- Add Operation2  --->
+Name : C_to_F
+Return Type : Float
+Add --> Parameter [
+    Name : c
+    Type: float
+]
+- done
+
+### inside public Float (F_to_C) and (C_to_F) clear the return null part ###
+
+write in F_to_C --> return( ( f-32 ) *5/9 );
+write in C_to_F --> return( ( c*9/5 ) +32 );
+
+- Write click on FolderName : WS_P1 > deploy
+- # inside WS_P1 folder > goto Web Service Folder > Click click on TempConvert > Test Web Service
+- then the web page will open - THERE YOU CAN SEE WHETHER YOUR WEBSERVICE IS WORKINGOR NOT
+
+### Part 1 Finish ###
+bas upper tak karna hai
+
+
+
+
+
+
+
+- goto File
+- New Project
+- Category : Java Web  || Project : Web Application
+- Project Name : WS_P1_Client
+- Server : Glassfish Server 4.1.1 > Next > Finish
+
+- Right CLick on FolderName ` WS_P1`
+- New > JSP > FileName : index > finish
+
+- Right CLick on FolderName ` WS_P1`
+- New > JSP > FileName : interaction > finish
+
+- Right CLick on FolderName ` WS_P1`
+- New > Web Service Client > Project [browse] > Select ` WS_P1 > [ TempConvert ]` > finish
